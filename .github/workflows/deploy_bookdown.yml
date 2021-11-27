@@ -40,10 +40,10 @@ jobs:
          name: _book # optional
          # Destination path
          path: _book # optional
-     - name: Deploy
-      uses: Cecilapp/GitHub-Pages-deploy@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        email: paezha@gmail.com
-        build_dir: _book             # "_site/" by default
+     - name: GH Pages deploy
+       uses: Cecilapp/GitHub-Pages-deploy@3.2.0
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       with:
+         email: paezha@gmail.com
+         build_dir: _book             # "_site/" by default
